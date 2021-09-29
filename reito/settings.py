@@ -146,5 +146,5 @@ LOGOUT_REDIRECT_URL = reverse_lazy('usuarios:login')
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-django_heroku.settings(locals(),staticfiles=False,logging=False)
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_heroku.settings(locals())
