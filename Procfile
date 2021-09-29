@@ -1,5 +1,5 @@
-release: python manage.py makemigrations reservas usuarios vehiculos viajes
+release: python manage.py makemigrations
 release: python manage.py migrate
 
 
-web: gunicorn reito.wsgi
+web: gunicorn reito.wsgi --log-file -
