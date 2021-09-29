@@ -128,12 +128,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-django_heroku.settings(locals())
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -144,5 +144,5 @@ LOGOUT_REDIRECT_URL = reverse_lazy('usuarios:login')
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
-
+# django_heroku.settings(locals())
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
