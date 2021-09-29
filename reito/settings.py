@@ -147,4 +147,4 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-django_heroku.settings(locals())
+django_heroku.settings(locals(),staticfiles=False,logging=False)
