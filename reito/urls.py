@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 
-from django.conf import settings
-from django.conf.urls.static import static
+# from django.conf import settings
+# from django.config.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,4 @@ urlpatterns = [
     path('', include("viajes.urls")),
     path('vehiculos/', include("vehiculos.urls")),
     path('reservas/', include("reservas.urls")),
-] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+# ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
