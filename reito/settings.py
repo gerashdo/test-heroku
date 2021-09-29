@@ -129,18 +129,21 @@ USE_L10N = True
 USE_TZ = True
 
 
+LOGIN_URL = reverse_lazy('usuarios:login')
+LOGIN_REDIRECT_URL = reverse_lazy('viajes:index')
+LOGOUT_REDIRECT_URL = reverse_lazy('usuarios:login')
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+if DEBUG:    
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-LOGIN_URL = reverse_lazy('usuarios:login')
-LOGIN_REDIRECT_URL = reverse_lazy('viajes:index')
-LOGOUT_REDIRECT_URL = reverse_lazy('usuarios:login')
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
