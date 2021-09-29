@@ -1,4 +1,4 @@
-release: python manage.py makemigrations
+release: python manage.py makemigrations viajes reservas usuarios vehiculos
 release: python manage.py migrate
 
 
