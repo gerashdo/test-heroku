@@ -1,0 +1,146 @@
+.separador
+{
+    padding: 5px;
+    background-color: rgb(231, 239, 250);
+}
+
+.propio-nav
+{
+    background-color: rgb(21, 84, 165);
+}
+
+.contenido
+{
+    /* padding: 15px; */
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contenido2
+{
+    padding-bottom: 30px;
+}
+
+.titulo
+{
+    text-align: center;
+}
+
+.formulario
+{
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    margin: auto;
+}
+/* .acciones
+{
+    display: ;
+    align-items: flex-end;
+} */
+
+.nav-personalized {
+    background-color: #0D0221;
+}
+
+.nav-personalized a {
+    color: #FFFFFF;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-personalized a:hover {
+    color: #3A606E;
+}
+
+.separator {
+    padding: 5px;
+}
+
+.container-image-index {
+    position: relative;
+    text-align: center;
+    background-color: #3A606E;
+}
+
+
+@media (min-width: 768px) {
+    .container-image-index h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: #FFFFFF;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-image-index h1 {
+        font-size: 30px;
+        font-weight: bolder;
+        color: #FFFFFF;
+        padding-bottom: 10px;
+    }
+}
+
+.image-index {
+    width: 100%;
+    height: auto;
+}
+
+.boton {
+    background:#17C3B2; 
+    color:white;
+}
+
+.card h1 {
+    font-weight: bolder;
+}
+
+.card li {
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1.5rem;
+}
+
+.boton-negativo {
+    background:#3A606E; 
+    color:white;
+}
+
+@media (min-width: 990px) {
+    .busqueda {
+        position:absolute; 
+        left:30%
+    }
+}
+
+@media (max-width: 989px) {
+    .busqueda {
+        position:absolute; 
+        left:25%
+    }
+}
+
+@media (max-width: 767px) {
+    .busqueda {
+        position:absolute; 
+        left:15%
+    }
+}
+
+@media (max-width: 340px) {
+    .busqueda {
+        position:absolute; 
+        left:5%
+    }
+}
+
+.destino-item:hover {
+    background:#3A606E; 
+    color:white;
+}
+

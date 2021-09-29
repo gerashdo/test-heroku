@@ -1,0 +1,85 @@
+{% extends 'base1.html' %}
+
+
+{% block title %}
+  Información del Viaje
+{% endblock title %}
+
+{% block body %}
+  <div class="container">
+    <div class="container col-sm-11 col-md-9 col-lg-5">
+      <div class="card">
+          <div class="card-header text-center">
+              <h1 class="card-title">{{viaje.destino}}</h1>
+              <h5 class="card-title">{{viaje.fecha}}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{viaje.hora}}</li>
+              <li class="list-group-item">${{viaje.precio}}</li>
+              <li class="list-group-item">{{viaje.asientos}} asientos disponibles</li>
+              <li class="list-group-item">{{viaje.conductor}}</li>
+          </ul>
+          <div class="card-body">
+              <p class="card-text">{{viaje.descripcion}}</p>
+          </div>
+        </div>
+    </div>
+
+    <br><br>
+    
+    <h1 class="text-center">Viajeros aprobados</h1>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col col-sm-10 col-md-8 col-lg-6">
+          <table class="table">
+            <thead>
+              <th>Nombre</th>
+              <th>Acciones</th>
+            </thead>
+            <tbody>
+              {% for viajero in viajeros %}
+              <tr>
+                <td>{{viajero}}</td>
+              </td>
+              <td>
+                <a class="btn boton" href="{% url 'usuarios:ver_info_pas' viajero.id viaje.id%}" >Ver informacion</a> 
+              </td>
+              </tr>
+              {% endfor %}
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <br><br>
+
+
+    <h1 class="text-center">Reservas pendientes</h1>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col col-sm-10 col-md-8 col-lg-6">
+          <table class="table ">
+            <thead>
+              <th>Nombre</th>
+              <th>Acciones</th>
+            </thead>
+            <tbody>
+              {% for viajero in viajeros_pendientes %}
+              <tr>
+                <td>{{viajero}}</td>
+              </td>
+              <td>
+                <a class="btn boton" href="{% url 'usuarios:ver_info_pas' viajero.id viaje.id%}" >Ver informacion</a>
+              </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </div>
+{% endblock body %}
