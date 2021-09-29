@@ -1,5 +1,5 @@
-release: python manage.py makemigrations.py makemigrations
-release: python manage.py makemigrations.py migrate
+release: python manage.py makemigrations
+release: python manage.py migrate
 
 
 web: gunicorn reito.wsgi
