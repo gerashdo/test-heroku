@@ -26,4 +26,5 @@ urlpatterns = [
     path('', include("viajes.urls")),
     path('vehiculos/', include("vehiculos.urls")),
     path('reservas/', include("reservas.urls")),
-# ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+] 
+# + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
