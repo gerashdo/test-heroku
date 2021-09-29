@@ -134,5 +134,4 @@ LOGIN_REDIRECT_URL = reverse_lazy('viajes:index')
 LOGOUT_REDIRECT_URL = reverse_lazy('usuarios:login')
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
-
 django_heroku.settings(locals())
